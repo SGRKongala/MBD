@@ -15,7 +15,7 @@ from datetime import datetime
 
 def influenceAvg(path):
 	if path == '/user/s2765918/newsarticle/combined_data_slim.csv':
-		print(00000000000000000000000000)
+		return 1
 	else:
 		df_inf=spark.read.options(delimiter=",", header=True).csv(path)
 		df_inf1=df_inf.groupBy(year("date")).agg(mean("max_inf")).sort(asc("year(date)"))
