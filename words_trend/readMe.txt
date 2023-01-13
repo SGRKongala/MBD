@@ -1,1 +1,2 @@
-trend of words per year with autocorrelation
+trend of words per week
+search for words and find pattern
