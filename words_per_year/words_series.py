@@ -1,4 +1,4 @@
-path="/user/s2765918/newsarticle/combined_data_slim.csv"
+path="/user/s2765918/newsarticle/*.csv"
 df =spark.read.options(header=True, inferSchema=True).option("multiline",'true').csv(path)
 #Change Date format to year and month
 df1 = df.select(lower(col("title")), date_format('date', 'yyyy-MM').alias("year"))
